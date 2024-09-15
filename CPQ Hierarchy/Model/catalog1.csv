@@ -1,0 +1,7 @@
+Models,,,,,,,,,,,
+,,,,,,,,,,,
+update,segment_var_name,pline_variable,_bm_model_name,_bm_model_description,model_variable,security_,guid,_bm_model_ready_for_self_service,_bm_model_self_service_part_number,_bm_model_partner_part_id,_bm_model_partner_organization_id
+add,cars,hatchbacks,Alto,,alto,,bm_prd_family_cars.bm_prd_level_product_line.bm_catalog_hatchbacks.bm_catalog_alto,0,,,
+add,cars,hatchbacks,Altroz,,altroz,,bm_prd_family_cars.bm_prd_level_product_line.bm_catalog_hatchbacks.bm_catalog_altroz,0,,,
+add,cars,sedans,Ciaz,,ciaz,,bm_prd_family_cars.bm_prd_level_product_line.bm_catalog_sedans.bm_catalog_ciaz,0,,,
+add,planes,jets,Airbus,,airbus,,bm_prd_family_planes.bm_prd_level_product_line.bm_catalog_jets.bm_catalog_airbus,0,,,

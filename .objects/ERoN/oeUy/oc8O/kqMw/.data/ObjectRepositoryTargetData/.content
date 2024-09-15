@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="X-fwdlS6H0CCSP447jlTxg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp" CVScreenId="c2b5abfa-f5ab-47c5-abd3-af49dbaa22f1" CvElementArea="301, 16, 24, 23" CvType="Icon" DesignTimeRectangle="296, 11, 34, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Find on page for     Product Family List' role='dialog' /&gt;&lt;ctrl name='Show find options. 0 filters enabled' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Find on page for     Product Family List' role='dialog' /&gt;&lt;ctrl name='Show find options. 0 filters enabled' role='push button' automationid='' check:fulltext='Show find options. 0 filters enabled' /&gt;" Guid="db07738e-d261-4d59-9d0f-680ac2ef7dba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC0SURBVFhH7dRBCsMgFIThntBrRPFsouABX5lNcfEMHbUQyiw+SPI0/AvxFUKwJ1IYS2EshbEUxlIY6z/Ceu9bvH/OUGGtNUspubM72IO93myGCosxWinFruty5x6sxR7s9eYz9Blj4lajYOnwfxO3EwVLYXAXtxsFy2HgxZ2Igq0wyDlbrfXzjmd8G9es2A6D8Y5i76sZhbEUxjoWNvLWsI6E/YLCWApjKYylMJbCWA8NC/YGHLYBalyXAL0AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd aaname='Find on page for     Product Family List' app='msedge.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cc901f645685c75c640f51e52291a36a.png" xmlns="">0uH3M51VNGUmvjAY_b5w5Ow</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

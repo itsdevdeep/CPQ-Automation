@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'Show find'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "kqMwaudjvE63Vs_5yqrvaw",
+  "Reference": "1GCea02mV0upA0M3MxvzJw/kqMwaudjvE63Vs_5yqrvaw",
+  "ParentRef": "1GCea02mV0upA0M3MxvzJw/oc8OT989_EKe1vwS_IVtgw",
+  "Created": "2024-08-27T18:25:40.4669621Z",
+  "Updated": "2024-08-27T18:25:40.4669621Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

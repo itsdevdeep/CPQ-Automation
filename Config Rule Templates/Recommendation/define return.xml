@@ -1,0 +1,25 @@
+<action>
+	<action_type><![CDATA[Advanced]]></action_type>
+	<attribute>
+		<variable_name><![CDATA[ATTR_VAR_NAME]]></variable_name>
+		<category><![CDATA[Configurable Attributes]]></category>
+	</attribute>
+	<operator1><![CDATA[=]]></operator1>
+	<value1/>
+	<operator2><![CDATA[]]></operator2>
+	<value2/>
+	<action_function>
+		<function_script><![CDATA[FUNCTION_DEFINING_RETURN_WITH_VALUE]]></function_script>
+	</action_function>
+	<set_type><![CDATA[SET_TYPE]]></set_type>
+	<comments_type><![CDATA[Simple]]></comments_type>
+	<comments>
+		<en><![CDATA[System recommendation]]></en>
+	</comments>
+	<comments_function>
+		<function_script/>
+	</comments_function>
+	<constraint_type><![CDATA[Constraint]]></constraint_type>
+	<constrain_all>0</constrain_all>
+	<constraint_display_override><![CDATA[NO_OVERRIDE]]></constraint_display_override>
+</action>

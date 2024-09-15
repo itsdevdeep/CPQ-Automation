@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VHpmYQBvlk-lniswn2f-yw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp" DesignTimeRectangle="8, 122, 1920, 918" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' type='' class='' aaname='                                                                                                   ' check:innerText='Admin Drawer&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;CPQ Cloud&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;User Menu&amp;#xD;&amp;#xA;  &amp;#x9;&amp;#xD;&amp;#xA; Product Family List&amp;#x9;&amp;#xD;&amp;#xA;Select&amp;#x9;Product Family&amp;#x9;Navigation' /&gt;" Guid="ea32d795-0730-4e4d-94bd-f223b9b8234f" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3623dbb8b09f3626e2988827432c89fa.png" xmlns="">0h8Z2SF2QZkqhd14hM7UEvA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

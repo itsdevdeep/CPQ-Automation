@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Keyboard Shortcuts 'Admin Commerce'",
+  "Type": "Element",
+  "Id": "WaLBPd4IxkyxMXTqg1wLQg",
+  "Reference": "1GCea02mV0upA0M3MxvzJw/WaLBPd4IxkyxMXTqg1wLQg",
+  "ParentRef": "1GCea02mV0upA0M3MxvzJw/oc8OT989_EKe1vwS_IVtgw",
+  "Created": "2024-08-27T18:54:57.0804902Z",
+  "Updated": "2024-08-27T18:54:57.0804902Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<condition>
+	<attribute>
+		<variable_name><![CDATA[ATTR_VAR_NAME]]></variable_name>
+		<category><![CDATA[Configurable Attributes]]></category>
+	</attribute>
+	<operator1><![CDATA[=]]></operator1>
+	<value1/>
+	<operator2><![CDATA[]]></operator2>
+	<value2/>
+	<rule_input_index>i++</rule_input_index>
+	<value_type><![CDATA[Static]]></value_type>
+	<attribute_value/>
+	<system_config_metadata/>
+</condition>

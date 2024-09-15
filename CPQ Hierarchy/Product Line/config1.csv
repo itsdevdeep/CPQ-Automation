@@ -1,0 +1,6 @@
+Product Lines,,,,,,
+,,,,,,
+update,segment_var_name,_bm_pline_name,_bm_pline_description,pline_variable,security_,guid
+add,cars,Hatchbacks,,hatchbacks,,bm_prd_family_cars.bm_prd_level_product_line.bm_catalog_hatchbacks
+add,cars,Sedans,,sedans,,bm_prd_family_cars.bm_prd_level_product_line.bm_catalog_sedans
+add,planes,Jets,,jets,,bm_prd_family_planes.bm_prd_level_product_line.bm_catalog_jets
