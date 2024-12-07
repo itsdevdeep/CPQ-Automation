@@ -1,0 +1,1121 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Config_Flow" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Add_Config_Flow_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Add_Config_Flow" sap:VirtualizedContainerService.HintSize="1294,16754" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="sheetData" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[sheetData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1294,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="ConfigData" WorkbookPath="CPQ Hierarchy\CPQ Config Data.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Administration Platform" sap:VirtualizedContainerService.HintSize="1294,16611" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1260,16371" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" DataTable="[sheetData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1226,14439" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1192,14243" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="url1" />
+                      <Variable x:TypeArguments="x:String" Name="resp" />
+                      <Variable x:TypeArguments="x:String" Name="respStr1" />
+                      <Variable x:TypeArguments="x:Int32" Name="respCode1" />
+                      <Variable x:TypeArguments="njl:JObject" Name="jsonResp1" />
+                      <Variable x:TypeArguments="x:String" Name="url2" />
+                      <Variable x:TypeArguments="x:String" Name="respStr2" />
+                      <Variable x:TypeArguments="x:Int32" Name="respCode2" />
+                      <Variable x:TypeArguments="njl:JObject" Name="jsonResp2" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="1158,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[url1]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow.Item("REST CALL 1").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[url1]" sap:VirtualizedContainerService.HintSize="1158,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Password="Devd$050501" Result="[respStr1]" StatusCode="[respCode1]" TimeoutMS="6000" Username="devdeepdasgupta">
+                      <ui:HttpClient.Attachments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Attachments>
+                      <ui:HttpClient.Cookies>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Cookies>
+                      <ui:HttpClient.Headers>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Headers>
+                      <ui:HttpClient.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Parameters>
+                      <ui:HttpClient.UrlSegments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.UrlSegments>
+                    </ui:HttpClient>
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="1158,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonResp1]" JsonString="[respStr1]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="1158,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[url2]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow.Item("REST CALL 2").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[url2]" sap:VirtualizedContainerService.HintSize="1158,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Password="Devd$050501" Result="[respStr2]" StatusCode="[respCode2]" TimeoutMS="6000" Username="devdeepdasgupta">
+                      <ui:HttpClient.Attachments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Attachments>
+                      <ui:HttpClient.Cookies>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Cookies>
+                      <ui:HttpClient.Headers>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Headers>
+                      <ui:HttpClient.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Parameters>
+                      <ui:HttpClient.UrlSegments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.UrlSegments>
+                    </ui:HttpClient>
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="1158,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jsonResp2]" JsonString="[respStr2]" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1158,279" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[respCode2]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <If Condition="[respCode1 = 200 AND respCode2 = 200]" sap:VirtualizedContainerService.HintSize="1158,13228" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1124,12794" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="segmentID" />
+                            <Variable x:TypeArguments="x:String" Name="id" />
+                            <Variable x:TypeArguments="x:String" Name="parentId" />
+                            <Variable x:TypeArguments="x:String" Name="configFlowURL" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1090,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[segmentID]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[jsonResp1("segmentId").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[jsonResp2("id").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[parentId]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[jsonResp2("parentId").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[configFlowURL]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">["https://cpq-20312.bigmachines.com/admin/configuration/rules/list_rules.jsp?rule_type=6&amp;ref_type=4&amp;ref_id="+id+"&amp;pline_id="+parentId+"&amp;segment_id="+segmentId]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1090,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[configFlowURL]" Version="V4" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/list_rules.jsp" CVScreenId="16355b69-5305-4787-9aea-0e7e3c4e5217" CvElementArea="1819, 304, 48, 33" CvTextArea="1829, 314, 28, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1822, 307, 43, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Add' /&gt;" Guid="8ece15a8-994f-4af0-8406-e9cbc13600a2" InformativeScreenshot="687e2a5980ceceec1d6bdc20d037709f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rules List' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1090,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="[CurrentRow.Item(&quot;Config Flow Rule Name&quot;).ToString]" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?fromList=true&amp;rule_id=-1&amp;rule_type=6&amp;segment_id=161&amp;pline_id=47327038&amp;model_id=47327044&amp;company_id=4118171&amp;search_flow_group_id=-1" CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvElementArea="578, 216, 389, 24" CvType="InputBox" DesignTimeRectangle="580, 218, 384, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class=' x-form-field x-form-text' tag='INPUT' type='text' aaname='' /&gt;" Guid="9fbe8b3f-26d4-49f7-8a17-fee591c0402b" InformativeScreenshot="69194109d231a593f3294838fcb85732.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvTextArea="463, 223, 41, 12" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="464, 218, 113, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='x-auto-15' type='' tag='LABEL' class='x-form-item-label' aaname='Name:' check:innerText='Name:' /&gt;" Guid="cc1fd3a9-42ee-40cc-8d0e-821e9f18e22c" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Variable Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1090,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="[CurrentRow.Item(&quot;Config Flow Rule Var Name&quot;).ToString]" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?fromList=true&amp;rule_id=-1&amp;rule_type=6&amp;segment_id=161&amp;pline_id=47327038&amp;model_id=47327044&amp;company_id=4118171&amp;search_flow_group_id=-1" CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvElementArea="579, 244, 386, 23" CvType="InputBox" DesignTimeRectangle="580, 245, 384, 21" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='varName' class=' x-form-field x-form-text' tag='INPUT' type='text' aaname='' /&gt;" Guid="ea8143d9-9204-4ae3-b5cc-9b950adb75bf" InformativeScreenshot="030b6954b82c235d339789ed14776f02.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvTextArea="462, 248, 95, 13" CvTextArgument="Variable Name:" CvType="Text" DesignTimeRectangle="464, 245, 113, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Variable Name:' parentid='x-auto-15' type='' tag='LABEL' class='x-form-item-label' check:innerText='Variable Name:' /&gt;" Guid="a6405152-9ba3-43ca-90aa-1bdcc0386790" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wizard Node Type'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?fromList=true&amp;rule_id=-1&amp;rule_type=6&amp;segment_id=161&amp;pline_id=47327038&amp;model_id=47327044&amp;company_id=4118171&amp;search_flow_group_id=-1" CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvElementArea="606, 456, 224, 25" CvType="InputBox" DesignTimeRectangle="607, 457, 203, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='x-auto-54' class=' x-form-field x-form-text x-triggerfield-noedit' tag='INPUT' type='text' aaname='Wizard Node Type:' /&gt;" Guid="223f216a-671a-4427-ae75-4b07389779a8" InformativeScreenshot="b596c00b70cd328d52a983f332f4bd1d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="943aad96-7128-4853-a1cf-70e3ab7de296" CvTextArea="463, 461, 116, 15" CvTextArgument="Wizard Node Type:" CvType="Text" DesignTimeRectangle="464, 457, 141, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='x-auto-56' type='' tag='LABEL' class='x-form-item-label' aaname='Wizard Node Type:' check:innerText='Wizard Node Type:' /&gt;" Guid="cf821fc2-72fe-4dc0-be4e-cb9f9e2b31d4" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start and End Node'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?fromList=true&amp;rule_id=-1&amp;rule_type=6&amp;segment_id=161&amp;pline_id=47327038&amp;model_id=47327044&amp;company_id=4118171&amp;search_flow_group_id=-1" CVScreenId="d13aa09e-5c42-4c3f-bc93-0cf5c947601f" CvTextArea="611, 524, 106, 12" CvTextArgument="Start and End Node" CvType="Text" DesignTimeRectangle="608, 520, 218, 20" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Start and End Node' parentid='x-auto-59' tag='DIV' type='' class='x-combo-list-item ' check:innerText='Start and End Node' /&gt;" Guid="859700e2-1219-4a4e-b1e8-79f3838ab1a0" InformativeScreenshot="5e90fac39e299f1a1727638602752d99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?fromList=true&amp;rule_id=-1&amp;rule_type=6&amp;segment_id=161&amp;pline_id=47327038&amp;model_id=47327044&amp;company_id=4118171&amp;search_flow_group_id=-1" CVScreenId="6c6d11c8-9974-4c06-8b31-311888fcaa36" CvElementArea="1264, 493, 57, 25" CvTextArea="1289, 499, 24, 12" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1268, 496, 48, 18" DesignTimeScaleFactor="1.100000023841858" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='x-auto-34' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='x-btn-text ' aaname='Add' check:innerText='Add' /&gt;" Guid="497baf37-4740-4cc4-82b5-5ef383c12f5f" InformativeScreenshot="4ef92b1aeda697f63c11f77065876532.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="1090,165" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Configuration Flow added for model: &quot;+CurrentRow.Item(&quot;Model Var Name&quot;).ToString]" UseDefaultEncoding="False" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Layout'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_rule.jsp?rule_id=47327139&amp;rule_type=6&amp;pline_id=47327038&amp;segment_id=161&amp;model_id=47327044&amp;fromList=true" CVScreenId="6beafb50-2709-4ba3-b236-cf0c778dbd2a" CvElementArea="1163, 492, 71, 25" CvTextArea="1190, 499, 38, 14" CvTextArgument="Layout" CvType="Button" DesignTimeRectangle="1168, 496, 62, 18" DesignTimeScaleFactor="1.100000023841858" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='x-auto-37' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='x-btn-text ' aaname='Layout' check:innerText='Layout' /&gt;" Guid="f0b45f3e-afee-40fc-9c16-ebd6e48b5336" InformativeScreenshot="d000904e5e42fc37761e863a8f950a67.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Flow: Rule Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" DesignTimeRectangle="263, 193, 58, 18" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl id='x-auto-8' tag='TABLE' /&gt;&lt;webctrl type='' tag='EM' class='x-btn-arrow' aaname='' check:innerText='Add' /&gt;" Guid="ae9cc004-f2f2-41b9-9a4d-711a0201d335" InformativeScreenshot="ff0f032c51e336494ecfecb75aed3ddd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Layout Elements'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="957b1c21-6680-436e-b3c8-2784948c9b18" CvTextArea="292, 276, 90, 14" CvTextArgument="Layout Elements" CvType="Text" DesignTimeRectangle="264, 271, 141, 24" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='x-auto-43' tag='A' type='' class=' x-menu-item x-component' aaname='Layout Elements' check:innerText='Layout Elements' /&gt;" Guid="7f4dbf7b-a32f-4ace-a955-a858b8c7f63c" InformativeScreenshot="cfc2001f8d0e1d4810c14867ea9b08ce.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" DisplayName="Drag and Drop 'Add Grid'" sap:VirtualizedContainerService.HintSize="1090,260" sap2010:WorkflowViewState.IdRef="NDragAndDrop_1" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NDragAndDrop.DestinationTarget>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" DesignTimeRectangle="479, 329, 1021, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='x-auto-39' type='' tag='DIV' class=' config-admin-column-inner config-admin-column-last x-component' aaname='' /&gt;" Guid="9eada14c-30e9-4f40-971e-6d6dcb7ff126" InformativeScreenshot="51d7abf99a64908650953ce0b3817b22.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NDragAndDrop.DestinationTarget>
+                            <uix:NDragAndDrop.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="692958d9-cbda-4d73-884d-5aa81f4d10c2" CvTextArea="52, 467, 53, 13" CvTextArgument="Add Grid" CvType="Text" DesignTimeRectangle="53, 466, 67, 16" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-50' tag='TABLE' /&gt;&lt;webctrl id='x-auto-48' type='' tag='DIV' class=' add-layout-draggable x-component' aaname='Add Grid' check:innerText='Add Grid' /&gt;" Guid="8a6684f2-a10c-4af3-8369-954c72fe42b8" InformativeScreenshot="a46fdd249d65c1fa837d670824532e16.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NDragAndDrop.Target>
+                          </uix:NDragAndDrop>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Number of Columns'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="c78acbae-f0c8-43f5-b62c-6132fc458a4e" CvElementArea="847, 346, 223, 25" CvType="InputBox" DesignTimeRectangle="849, 347, 220, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-83' tag='INPUT' type='text' class=' x-form-field x-form-text ' aaname='Number of Columns' /&gt;" Guid="5a86aab5-3406-4ee7-b93f-2d800f2bc30f" InformativeScreenshot="d7a3125d5651ffcd1ad78dce16dbbe6f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="c78acbae-f0c8-43f5-b62c-6132fc458a4e" CvTextArea="711, 351, 122, 13" CvTextArgument="Number of Columns" CvType="Text" DesignTimeRectangle="712, 347, 135, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='x-form-item-label' aaname='Number of Columns' check:innerText='Number of Columns' /&gt;" Guid="278737cb-5c2d-4b3b-af89-04158d0dc64d" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1090,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(back)][u(hk)]" Version="V4">
+                            <uix:NKeyboardShortcuts.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NKeyboardShortcuts.VerifyOptions>
+                          </uix:NKeyboardShortcuts>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number of Columns'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1090,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="3" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="c78acbae-f0c8-43f5-b62c-6132fc458a4e" CvElementArea="847, 346, 223, 25" CvType="InputBox" DesignTimeRectangle="849, 347, 220, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-83' tag='INPUT' type='text' class=' x-form-field x-form-text ' aaname='Number of Columns' /&gt;" Guid="70ed5b03-f6f6-4366-a8e3-74fc2aa1a717" InformativeScreenshot="d7a3125d5651ffcd1ad78dce16dbbe6f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="c78acbae-f0c8-43f5-b62c-6132fc458a4e" CvTextArea="711, 351, 122, 13" CvTextArgument="Number of Columns" CvType="Text" DesignTimeRectangle="712, 347, 135, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='x-form-item-label' aaname='Number of Columns' check:innerText='Number of Columns' /&gt;" Guid="0694b89e-769a-4030-82a8-102f78e8656d" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Group'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="c94b09ea-28e9-4a45-a820-5de152de05c6" CvElementArea="719, 430, 16, 16" CvType="CheckBox" DesignTimeRectangle="721, 432, 14, 14" DesignTimeScaleFactor="1.100000023841858" ElementType="CheckBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-103' tag='INPUT' type='checkbox' class='' aaname='' /&gt;" Guid="da64758d-11ed-4b1c-bd07-9fa0a7e46193" InformativeScreenshot="23433eac4d80979c98a9cb1a393ac541.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="c94b09ea-28e9-4a45-a820-5de152de05c6" CvTextArea="737, 433, 39, 14" CvTextArgument="Group" CvType="Text" DesignTimeRectangle="738, 432, 37, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-103' tag='SPAN' type='' class='x-fieldset-header-text' aaname='Group' check:innerText='Group' /&gt;" Guid="3629772d-529b-4dc5-97e5-fb1efbc0cad6" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Group Title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1090,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="Attributes" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="9103632c-c9dc-44a7-9a89-e24c6b7158c6" CvElementArea="844, 451, 223, 25" CvType="InputBox" DesignTimeRectangle="845, 452, 220, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-86' tag='INPUT' type='text' class=' x-form-field x-form-text' aaname='Group Title' /&gt;" Guid="b3be5e9f-bb4a-492e-b66c-7f97cb1be92b" InformativeScreenshot="c9839ac418ab0d3aad4175f23527a27d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="9103632c-c9dc-44a7-9a89-e24c6b7158c6" CvTextArea="718, 456, 69, 14" CvTextArgument="Group Title" CvType="Text" DesignTimeRectangle="718, 452, 125, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-103' tag='LABEL' type='' class='x-form-item-label' aaname='Group Title' check:innerText='Group Title' /&gt;" Guid="169fdde1-3846-4404-9393-25b3fa0c8ac3" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show Title'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="9103632c-c9dc-44a7-9a89-e24c6b7158c6" CvElementArea="843, 481, 16, 16" CvType="CheckBox" DesignTimeRectangle="845, 483, 14, 14" DesignTimeScaleFactor="1.100000023841858" ElementType="CheckBox" FuzzySelectorArgument="&lt;webctrl id='x-auto-104' tag='INPUT' type='checkbox' class=' x-form-checkbox' aaname='Show Title' /&gt;" Guid="c326a510-6015-4246-b6cc-afdfd232e097" InformativeScreenshot="5e6587d0c9949c08648ff4727f47fabb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="9103632c-c9dc-44a7-9a89-e24c6b7158c6" CvTextArea="874, 484, 59, 12" CvTextArgument="Show Title" CvType="Text" DesignTimeRectangle="876, 483, 67, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-90' tag='LABEL' type='' class='x-form-cb-label' aaname='Show Title' check:innerText='Show Title' /&gt;" Guid="8d128cd5-29d1-4521-a4dc-23eabf8e1edd" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="9103632c-c9dc-44a7-9a89-e24c6b7158c6" CvElementArea="1058, 818, 84, 26" CvTextArea="1102, 825, 17, 12" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="1063, 823, 76, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='x-auto-99' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='x-btn-text ' aaname='Ok' check:innerText='Ok' /&gt;" Guid="1f33185b-7cef-47e1-86f9-24490f5db345" InformativeScreenshot="9ac20821e854c4b1b391c38845af5aeb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" DesignTimeRectangle="270, 193, 58, 18" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl id='x-auto-8' tag='TABLE' /&gt;&lt;webctrl type='' tag='EM' class='x-btn-arrow' aaname='' check:innerText='Add' /&gt;" Guid="ebce710a-74c0-4127-8e95-6e2a028eea10" InformativeScreenshot="05550c3b99ea4f46bb9981a021c0ea14.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Attributes'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="c2155638-83be-42dc-866c-a4372b46605d" CvTextArea="299, 222, 54, 13" CvTextArgument="Attributes" CvType="Text" DesignTimeRectangle="271, 217, 141, 25" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='x-auto-41' tag='A' type='' class=' x-menu-item x-component' aaname='Attributes' check:innerText='Attributes' /&gt;" Guid="0c50efc9-e469-4404-8fd8-0c4b90098dfc" InformativeScreenshot="5e93940dbed6e16d27d60b2e6e0367fa.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <If Condition="[string.IsNullOrEmpty(CurrentRow.Item(&quot;Product family Attributes&quot;).ToString) = false]" sap:VirtualizedContainerService.HintSize="1090,2344" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1056,1958" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="pfAttrs" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uast:SplitText DisplayName="Split Text" sap:VirtualizedContainerService.HintSize="1022,223" sap2010:WorkflowViewState.IdRef="SplitText_1" Results="[pfAttrs]" Separator="Comma" SeparatorKey="Comma" Source="[CurrentRow.Item(&quot;Product family Attributes&quot;).ToString]" />
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="1022,1675" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[pfAttrs]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:String">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="988,1538" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Filter Attributes...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="[currentText]" Version="V4">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="0558e89e-0e9e-46de-afb9-006b69c50159" CvTextArea="1675, 253, 93, 12" CvTextArgument="Filter Attributes..." CvType="Text" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-178' tag='INPUT' type='text' class=' x-form-field x-form-text x-form-empty-field' aaname='' /&gt;" Guid="e805ea30-3003-445d-bea2-b8cf2a17621b" InformativeScreenshot="8fbdd9283cb37a6a89c5a643dfcd2415.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.VerifyOptions>
+                                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            </uix:VerifyExecutionTypeIntoOptions>
+                                          </uix:NTypeInto.VerifyOptions>
+                                        </uix:NTypeInto>
+                                        <uix:NCheckState DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="954,729" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Timeout="2" Version="V4">
+                                          <uix:NCheckState.IfExists>
+                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,480" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" DisplayName="Drag and Drop 'IMG'" sap:VirtualizedContainerService.HintSize="416,260" sap2010:WorkflowViewState.IdRef="NDragAndDrop_3" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                                <uix:NDragAndDrop.DestinationTarget>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327180" DesignTimeRectangle="528, 384, 320, 31" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='x-auto-174' type='' tag='DIV' class=' config-admin-column-inner x-component' aaname='' /&gt;" Guid="4181e77a-3905-4bb4-9d81-3cae9529fe53" InformativeScreenshot="5abb1fc1e4168dfdc2e4ad4f6daab970.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.DestinationTarget>
+                                                <uix:NDragAndDrop.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327180" CVScreenId="e47af797-3844-4255-a404-05dd58dfd898" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="4e7c955b-0cf7-43d6-b3bf-9210204c9156" InformativeScreenshot="fcd00d9d484cbc403fa96dabc9143004.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.Target>
+                                              </uix:NDragAndDrop>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; is added to the layout.&quot;]" UseDefaultEncoding="False" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfExists>
+                                          <uix:NCheckState.IfNotExists>
+                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; was not found. Item was skipped.&quot;]" UseDefaultEncoding="False" />
+                                              <ui:Continue sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfNotExists>
+                                          <uix:NCheckState.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327139" CVScreenId="7ba1ad99-a2f3-48e3-a9ac-63f539844f7b" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="65682f44-f419-43a0-a755-0f97ca13f17e" InformativeScreenshot="b31d11e6fb2e74e62d808040fdb309e4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                          </uix:NCheckState.Target>
+                                        </uix:NCheckState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Name'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="b62a07be-aa2a-45f1-8943-fbc81647bc2e" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-182' tag='INPUT' type='text' class=' x-form-field x-form-text  x-form-focus' aaname='' /&gt;" Guid="e8e1e34d-eb05-4d70-8195-22127e92683e" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                          <uix:NClick.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NClick.VerifyOptions>
+                                        </uix:NClick>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(back)][u(hk)]" Version="V4">
+                                          <uix:NKeyboardShortcuts.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NKeyboardShortcuts.VerifyOptions>
+                                        </uix:NKeyboardShortcuts>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="AppendLine_9" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;No attributes defined for adding to Product Family column&quot;]" UseDefaultEncoding="False" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <If Condition="[string.IsNullOrEmpty(CurrentRow.Item(&quot;Line Level Attributes&quot;).ToString) = false]" sap:VirtualizedContainerService.HintSize="1090,2344" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1056,1958" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="lineAttrs" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uast:SplitText DisplayName="Split Text" sap:VirtualizedContainerService.HintSize="1022,223" sap2010:WorkflowViewState.IdRef="SplitText_2" Results="[lineAttrs]" Separator="Comma" SeparatorKey="Comma" Source="[CurrentRow.Item(&quot;Line Level Attributes&quot;).ToString]" />
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="1022,1675" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[lineAttrs]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:String">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="988,1538" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Filter Attributes...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="[currentText]" Version="V4">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327631" CVScreenId="9d161e21-3603-4776-9fb0-e78cb248badf" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-182' tag='INPUT' type='text' class=' x-form-field x-form-text x-form-empty-field' aaname='' /&gt;" Guid="5998bf80-9db2-4088-8595-8ad2634327d4" InformativeScreenshot="8fbdd9283cb37a6a89c5a643dfcd2415.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.VerifyOptions>
+                                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            </uix:VerifyExecutionTypeIntoOptions>
+                                          </uix:NTypeInto.VerifyOptions>
+                                        </uix:NTypeInto>
+                                        <uix:NCheckState DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="954,729" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                          <uix:NCheckState.IfExists>
+                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,480" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" DisplayName="Drag and Drop 'IMG'" sap:VirtualizedContainerService.HintSize="416,260" sap2010:WorkflowViewState.IdRef="NDragAndDrop_4" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                                <uix:NDragAndDrop.DestinationTarget>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" DesignTimeRectangle="850, 384, 320, 31" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='x-auto-176' type='' tag='DIV' class=' config-admin-column-inner x-component' aaname='' /&gt;" Guid="05cbbaa0-3052-4cd7-a30d-8502923463fe" InformativeScreenshot="0ca456f92b3bf4b3d42cf5982bbd64ab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.DestinationTarget>
+                                                <uix:NDragAndDrop.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="e046e725-3568-4673-94cf-d1e3999332c5" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="6a02e309-4dd9-40d5-a163-cfef948219aa" InformativeScreenshot="be7dc3b76165399c0e93f51486117b5a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.Target>
+                                              </uix:NDragAndDrop>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; is added to the layout.&quot;]" UseDefaultEncoding="False" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfExists>
+                                          <uix:NCheckState.IfNotExists>
+                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; was not found. Item was skipped.&quot;]" UseDefaultEncoding="False" />
+                                              <ui:Continue sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfNotExists>
+                                          <uix:NCheckState.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="47df2e6e-6c9c-40f6-b613-5ebbcdbcdca4" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="8535cd60-c5b6-4abe-b19a-9dfd21377c14" InformativeScreenshot="406aed8ff10942fbc9547d8f92f0c36a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                          </uix:NCheckState.Target>
+                                        </uix:NCheckState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'radio'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="def6eac8-5f21-48f2-8afc-fcac2b4a9a83" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-182' tag='INPUT' type='text' class=' x-form-field x-form-text  x-form-focus' aaname='' /&gt;" Guid="20a9324c-a882-47a4-83cc-e8850f0ad02d" ImageBase64="" InformativeScreenshot="7dbeba421677ec25b4547468a033c3fd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                          <uix:NClick.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NClick.VerifyOptions>
+                                        </uix:NClick>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(back)][u(hk)]" Version="V4">
+                                          <uix:NKeyboardShortcuts.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NKeyboardShortcuts.VerifyOptions>
+                                        </uix:NKeyboardShortcuts>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="AppendLine_10" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;No attributes defined for adding to Product Line column&quot;]" UseDefaultEncoding="False" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <If Condition="[string.IsNullOrEmpty(CurrentRow.Item(&quot;Model Level Attributes&quot;).ToString) = false]" sap:VirtualizedContainerService.HintSize="1090,2344" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1056,1958" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="modelAttrs" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uast:SplitText DisplayName="Split Text" sap:VirtualizedContainerService.HintSize="1022,223" sap2010:WorkflowViewState.IdRef="SplitText_3" Results="[modelAttrs]" Separator="Comma" SeparatorKey="Comma" Source="[CurrentRow.Item(&quot;Model Level Attributes&quot;).ToString]" />
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="1022,1675" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[modelAttrs]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:String">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="988,1538" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Filter Attributes...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Text="[currentText]" Version="V4">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327631" CVScreenId="9d161e21-3603-4776-9fb0-e78cb248badf" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-182' tag='INPUT' type='text' class=' x-form-field x-form-text x-form-empty-field' aaname='' /&gt;" Guid="918a625d-6178-499c-9d8a-5f6eb354d0cc" InformativeScreenshot="0ea62a3b8cec078131ce82a1a9ce5648.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.VerifyOptions>
+                                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            </uix:VerifyExecutionTypeIntoOptions>
+                                          </uix:NTypeInto.VerifyOptions>
+                                        </uix:NTypeInto>
+                                        <uix:NCheckState DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="954,729" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                          <uix:NCheckState.IfExists>
+                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,480" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" DisplayName="Drag and Drop 'IMG'" sap:VirtualizedContainerService.HintSize="416,260" sap2010:WorkflowViewState.IdRef="NDragAndDrop_5" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                                <uix:NDragAndDrop.DestinationTarget>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" DesignTimeRectangle="1172, 384, 320, 31" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='x-auto-177' type='' tag='DIV' class=' config-admin-column-inner config-admin-column-last x-component' aaname='' /&gt;" Guid="aef7e5d4-e648-445d-b173-c5688fcbc8a7" InformativeScreenshot="7b9f6cbc6ef069ebf914ddc740840ac5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.DestinationTarget>
+                                                <uix:NDragAndDrop.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="e69212ed-f585-42c0-9fd6-5d72a88d826f" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="e8e26d1b-c46d-4cf7-ba1e-6d3d0359974a" InformativeScreenshot="b0381ecc704e0343fd5882284af3eebc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                </uix:NDragAndDrop.Target>
+                                              </uix:NDragAndDrop>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; is added to the layout.&quot;]" UseDefaultEncoding="False" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfExists>
+                                          <uix:NCheckState.IfNotExists>
+                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Attribute with variable name &quot;+currentText+&quot; was not found. Item was skipped.&quot;]" UseDefaultEncoding="False" />
+                                              <ui:Continue sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="Continue_4" />
+                                            </Sequence>
+                                          </uix:NCheckState.IfNotExists>
+                                          <uix:NCheckState.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="e69212ed-f585-42c0-9fd6-5d72a88d826f" DesignTimeRectangle="1728, 319, 18, 17" DesignTimeScaleFactor="1.100000023841858" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;img' src='https://cpq-20312.bigmachines.com/gwt/ConfigLayoutEditor/clear.cache.gif' tag='IMG' /&gt;" Guid="e799ee93-e251-4726-b5c7-358cd0e588ea" InformativeScreenshot="8965adc7b3e434d37d1a8cdb061453f2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                          </uix:NCheckState.Target>
+                                        </uix:NCheckState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'carModel'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="3244c6ee-b550-4803-9187-65484f3eb7d4" DesignTimeRectangle="1671, 248, 210, 22" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='x-auto-182' tag='INPUT' type='text' class=' x-form-field x-form-text  x-form-focus' aaname='' /&gt;" Guid="f5b842cf-556a-4860-95cc-fa1921dd7145" InformativeScreenshot="156a58a66c92bba03b7809838b72ee6f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                          <uix:NClick.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NClick.VerifyOptions>
+                                        </uix:NClick>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,238" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(back)][u(hk)]" Version="V4">
+                                          <uix:NKeyboardShortcuts.VerifyOptions>
+                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionOptions.Retry>
+                                              <uix:VerifyExecutionOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionOptions.Timeout>
+                                            </uix:VerifyExecutionOptions>
+                                          </uix:NKeyboardShortcuts.VerifyOptions>
+                                        </uix:NKeyboardShortcuts>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;No attributes defined for adding to Model column&quot;]" UseDefaultEncoding="False" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '*Save'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327207" CVScreenId="3244c6ee-b550-4803-9187-65484f3eb7d4" DesignTimeRectangle="78, 193, 59, 18" DesignTimeScaleFactor="1.100000023841858" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='x-auto-6' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='x-btn-text ' aaname='*Save' check:innerText='*Save' /&gt;" Guid="4a349bd9-d643-4242-b86e-eff6d7b86d42" InformativeScreenshot="4b7b7f19a7cf0d0f62cf337b74db71a9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back'" sap:VirtualizedContainerService.HintSize="1090,225" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/rules/edit_layout.jsp?rule_id=47327654" CVScreenId="44ad7bf7-1a3f-4291-b120-c21a909465ba" CvElementArea="9, 189, 61, 26" CvTextArea="37, 195, 27, 13" CvTextArgument="Back" CvType="Button" DesignTimeRectangle="15, 193, 51, 18" DesignTimeScaleFactor="1.100000023841858" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='x-auto-5' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class='x-btn-text ' aaname='Back' check:innerText='Back' /&gt;" Guid="2780695f-b138-4a5d-80d7-5fd9cbfea9fe" InformativeScreenshot="e13f857aa50ffeabdb9c3ff008e8e6c2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Configuration Layout Editor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="1090,156" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Layout for model &quot;+CurrentRow.Item(&quot;Model&quot;).ToString+&quot; is created and saved&quot;]" UseDefaultEncoding="False" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,273" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Could not navigate to Config Flow page for Model:&quot;+CurrentRow.Item(&quot;Model Var Name&quot;).ToString+&quot;Please recheck the REST Endpoint URL&quot;]" UseDefaultEncoding="False" />
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <ui:ForEachRow.CurrentIndex>
+                <OutArgument x:TypeArguments="x:Int32" />
+              </ui:ForEachRow.CurrentIndex>
+              <ui:ForEachRow.MaxIterations>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:ForEachRow.MaxIterations>
+            </ui:ForEachRow>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Deploy Product Families - Invoke Workflow File (Deploy Product Families.xaml)" sap:VirtualizedContainerService.HintSize="1226,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Deploy Product Families.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1226,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" Version="V4" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home Page'" sap:VirtualizedContainerService.HintSize="1226,225" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" CVScreenId="f677d0e8-fd11-4901-8316-812b2ccb689a" CvTextArea="998, 830, 70, 16" CvTextArgument="Home Page" CvType="Text" DesignTimeRectangle="999, 831, 69, 14" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Home Page' parentid='list-display' type='' tag='A' class='' check:innerText='Home Page' /&gt;" Guid="7d5ded9e-e8fb-4469-ae0f-b39c562f3cfb" InformativeScreenshot="60dbf26b885427a7f01755bec9e0c283.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Administration Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="1226,269" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
+              <uix:NMouseScroll.SearchedElement>
+                <uix:SearchedElement>
+                  <uix:SearchedElement.Target>
+                    <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/homepage/setup_home_page.jsp" CVScreenId="8c03d820-016d-4678-80f9-768615184d2d" CvElementArea="1561, 994, 145, 34" CvTextArea="1572, 1004, 123, 16" CvTextArgument="Deployment Center" CvType="Button" DesignTimeRectangle="1564, 997, 139, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Deployment Center' aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Deployment Center' /&gt;" Guid="7ea33ad5-e2a0-46f0-bbe7-30700543ddcb" InformativeScreenshot="e0681cdc3359f09b3b1cf0da54c1391a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home Page Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                  </uix:SearchedElement.Target>
+                  <uix:SearchedElement.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:SearchedElement.Timeout>
+                </uix:SearchedElement>
+              </uix:NMouseScroll.SearchedElement>
+            </uix:NMouseScroll>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Deployment Center'" sap:VirtualizedContainerService.HintSize="1226,225" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/homepage/setup_home_page.jsp" CVScreenId="8c03d820-016d-4678-80f9-768615184d2d" CvElementArea="1561, 994, 145, 34" CvTextArea="1572, 1004, 123, 16" CvTextArgument="Deployment Center" CvType="Button" DesignTimeRectangle="1564, 997, 139, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Deployment Center' aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Deployment Center' /&gt;" Guid="07ec5deb-053b-4546-bcf1-ee51d855a418" InformativeScreenshot="07f624512e6e171368dc2cf2b9a74a45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home Page Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Deploy'" sap:VirtualizedContainerService.HintSize="1226,225" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/homepage/schedule_events.jsp" CVScreenId="68faea13-67ac-4e2c-9721-85b9947a25fc" CvElementArea="1625, 246, 67, 33" CvTextArea="1636, 255, 45, 16" CvTextArgument="Deploy" CvType="Button" DesignTimeRectangle="1628, 248, 62, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Deploy' /&gt;" Guid="51ebe1cb-67c5-417a-9644-9f3aa36f4f5a" InformativeScreenshot="39ae5292919ac6299a1ebd18d911d174.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="1226,165" sap2010:WorkflowViewState.IdRef="AppendLine_13" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Home Page Deployed&quot;]" UseDefaultEncoding="False" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="1226,225" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/homepage/schedule_events.jsp" CVScreenId="f4f64b58-e852-4969-ac28-054407d2a135" DesignTimeRectangle="1741, 436, 67, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Refresh' aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Refresh' /&gt;" Guid="58adfd86-d06b-418b-9c8b-0e83c8e6324e" InformativeScreenshot="845106f6464ed221de017434c58df1d6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="1226,218" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5336ff5-79d4-4d37-8760-4bad985bf4ab" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/homepage/schedule_events.jsp" CVScreenId="5c722917-3769-49c0-9560-1417d6ceabe2" CvElementArea="1553, 135, 31, 30" CvType="Icon" DesignTimeRectangle="1555, 137, 27, 26" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Home' aria-role='img' tag='SPAN' type='' class='oj-navigationlist-item-icon cpq-nav-icon cpq-nav-home' aaname='' /&gt;" Guid="92c2cfb0-0e55-4c22-ba34-133e25cb7993" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAeCAYAAADU8sWcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALhSURBVEhL7VbNS2JRFO+fk0rBEAohoagQgoqSsAyiINq0cdHCiNBoo2FJX2ZEiwrdFKVREpX5schFYNCHrn/D74Dxus9xdCZnJmYWh8M59/dxn/e+42sqlUr4U9GkNn5n/Df/lHh+fsbS0hKGh4cxNzeHi4sLHUYbP2VeLBZxenqKjY0NyazZLxQK6OrqQktLCywWC/b29nRcbdRtTqPj42NMT0+jp6dHMmv2aW61WtHc3AyDwYDNzU0dXxt1mb+8vGB/fx/j4+Py07pcLsljY2PSf3p6wsrKCjo7O2UDn2JefqqdnR0MDQ1hcHAQgUAAJycnklmzv729jfv7eywvL6O7u1vwqlZd5m9vb3h4eEAoFEJfXx/6+/sRDAblrOPxuGTW7Pf29gru6upKNsA1Va9m89fXV6TTafj9fthsNjGn+NnZGXw+HyYnJyWzLm+OOOLPz8/x+Pio06zJnOd7c3MDr9crl4hPxTO8vLzEwsKCmPBSMXs8HulznTjiySOfOqp2VXO+r8lkEvPz82hvb4fdbsfW1pacp9vtRkdHhxiXgzX7qVRKcMSTRz6PgHqqR0VzAhOJBGZnZ9HW1iZnyYuUy+UwMzMDs9n8wbgc7HM9m80Knjz2qEO9Shv4YM7LxRvMV8doNGJgYACRSAR3d3eYmJiQ4aGaaoPrfP1ub29lwJBPHepRl/rfNT88PJQdU2RkZAQHBwdymUZHR98Hx4+COOLJI5861KMu9Suar6+vy2VpbW2F0+nE0dGRTC6HwyG7V02qBfHkkU8dPjl1qb+2tqY3z+fzuL6+lguSyWRkWoXDYZhMJp14LUEe+dShHnWpTx+deaXgq6OK1hO/NF7/SnP+mSwuLspYZWatYhpmvrq6KmfHPxxm1iqmYebRaPT9A4KZtYppmHksFvuAY61ivrb57u5uxVleizl55Kua2qhqzhE5NTUln0XaUD8SWKsY8shXNbVR1bzR8e+afwPOHO13d0jFZwAAAABJRU5ErkJggg==" InformativeScreenshot="039c1a7aa71ecb3e04323eb367688dc5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAjHSURBVFhHpdZ5UJNnHgfw4IFIbhS27T87O51xdeUmBpRUrdiyRc5wCZYCBe16TVVcBEREMSLIaQEVo+12qu6uq3aL4FFJn1wkEI4ASQgE8UTU2k3dTuOq3Xx33gRcDODa7nfmnfyV9/t5fs/zJi+N9orxJw8T/aQjxFc6bPaR3oCP7Bq8ZSb4KIzwUergp9LCT9Vl4bWpB3ltanFwV/OvHe/xi8Ij34t5xGzxlz6Er3QYvtLboABeskF4yQbgLe+Dt0IHn5Zu+Kk6wGtVI6hdCoH2qnVZz8XBFboGgeM9Xyl88ljAJz+aeeQRAqTfwV/6AL7SO/CR3oS39Dq8pBSgD54yA7wUPfBWdsNX1Q5/tQaLOyjAFSzvacBK/TmEDZzsihoSv/pEAsnjYj6xWG3l5B/wJw/gJ70HX+ld++qlg/C0ldsBnvIeeCm64KvSIKBVBX67DIs7m22A0L7TeM94EtFDRy3Jw8WJjl0TEkieiPnkRywiP4AC8IjZtno/6V3bBGyrlw1gIVVsu/RYKKMA3fBWdsBP3Qa+hprA5VHAKUQN1lMAJA8XW9cMi6ZGBJGnxYHkCfjEAgrBI98jgDyEv/S+DeAts++9p8xoWz1VvFDWi9/JurFQTgE64dOiAa9VBkHXJazoPYdQwxeIGjyKhJvlWDMsQurILmvGg+yJ5yKIPBMEkifWQPIvG2AR+ScWkUfws+39XfhJh+FtO3z9WCjTPS92vLwUHfBpaUVQ+9dYqm1AiO4MwgeOIvZ6BZJvFyH9fh7WfptlceynBZKn5kDyFHzyeBTwA/wlZiz46hYWNAxhQcM1zL8wAC+ZyTZ+x+Kxy1PRCV+VGks6LmGp9u8I6aUA9YgdKkXSLRHSR7Kw9sFmbDJnip+XB5FnYqp8bPXzTt+A+54rYGedByenEdy8S3DLa4Jb3gXM2XEerxU34c2/dUwotwOoR5GA3yZBcGcjVupOIsxYj4TrRUi6mY+04a3IvLcBGx+mWMcDLEHkKTy//A6cvCtg7rgCVj4Be7cSnCIVuKJWuInUmCNqwdwiGebukWBuwUW8VtSEeY1ahy3QwLdFgSDNBSzt/CtCuj/Dqr5qRPaXYvWNXKTe2YyMu+vwh/sp2PwwTkwLIj8lBpFnmHdyGK5Zl8HYKQezsA2sfVqwD/SCU6oHt0wPtzI95pTr4V7eA/eDnXA/oIJ7kQTu+Q1486x9Gp7yTngrlPBtUWKRqgnBHeewQnsc4X2VEJoKkTi0A8nXt+DD4XX46F4KNjxIGKEFNz/WLjjzLWZvl8A1Xw36ni4wRXqwSoxgl/aDUz4AboUJblUmzKkyYW61CXOrjPCo1MPjYDs8RDK472rEb5vU8JYr4KuQwF95EUGtZ/BW++dY0XUY4XoRYow7kWDaig9uZCL9dhoyh5Pw0V0haAENj/7NLGiDS74Grnt6QBf1gVHcD2aJCayDJrDLBsGpGAS38hrcqq5hTvU1zK3uxxuH+gZ/dchY4lHRle2xX6l+veQqPAkFuAp/ZSMWq7/AW5rjeLujFhH6IgiNeUgwbcOaoXVIu5mGjFvxdsD8Pz/ArJ0dcNndg9lFBriK+kHf3w/6gYEXEeV2BCe/Bb/Z+mX18wM0Gg+RPG3e+WYEKM6CrzyNoJY/YammHiHtpQjvyUGkLgdxxk14/1oaUm+ssQHW3okBzb1yAM753ZhVaIBLkRGz9xltCNdRBKNkAMxSO4KdTUAPK1U7lo9l/meXnwbIToGvPIUlqmNYqi7DCk0pwrQ7ENm7HULDRiQZk5EyGI/060Jk3owEjVtmwswCPZx3GzBrjxEue+2I2Y6IHCXoYSVgRB3KdiweC+8vl3sDZJ8jUF6LYGU5lrWW4t22HQjVbEeEdj1iejMQr0/B+6Y4fGCKQOaNUCttRr4OMwr0mLm7D86FfZi1p8+GcBmP2GcAPbICjKhqMIVHshyLxxJAxMU82XEEymsQrDyIZS17EaLajlDNRkR0pkHYm4pEQwKSjEKk9P8eaaaQQdr0nTrM2GXAjALDRAS1JRRiYxPoERVgCA+DGXesxLF4LLxvqkcWSWuxRH4AS+T78bYyCyvVWQhtW49VbamI6kqBUBuPJEMEkvTvIcUYIqBN26nH9Hz9pIhZowjX2DowomuocjATTgw6FlPxl3wiCJBUIpCUIogUQSAvwHLFNoQoNyBUlWoHtAsh7IxEnDYMyYZQYvvitDy9eSqEMzWJvA64RpSDITwCZvxxCmBlxp+Y8HIR0Fx6PkBSDr5kL5aQAgjINiyXb0KIIgPvtqQirHU1IjUxEHZFUAB7ORWnXD2ZlqfHGGK64ySy1aBHVoERW0+Vg5nwKZjxJ0ZeaB8Nv7mwK1BSaF0syYaAZGG5fD1CFB/iHUUywlQxCG+NMUdpIre88CWnXF2iU64eExC7KIQBLusbQY86NDr+T8cA1DTOv3CjcRFINm8RkI/Fy0gGCZGtIe/IV4tDFbET3wHG4pSrs1AIp/GIfDvCebsK9OhPJgOAFXds0vPw85OjK3bK1cF2OSBmZmtAj6oGY3IAWLH1Fpbw6ItjfUm4q8oTuWFlE84QhTDTHBB2iAH0mBowYo+OPwPjAWAJj4IlPGJhxxw+z46um/DOx4moSuSEV4o54RVm7qpycMPKJplcjk5Ay9FZJ0PMyvwKjJg6MOPFdsTkALBjDoMdXQd2dC3YUTXgRB4CJ7IanIgqcMIrwQmvAHdVuZUbVjbFecjRFdNydHBETN/RCXrsYTDi6u2P4v8HKHasfTE5OvEERJ4ezuuvgBFTaz+McRTiFwH++x740tgnYaUg4xEu6WftW0H9JsSJwYqrf1WAlRNe+T9W7hj7mTA7ImyTiK6l/pTAiqWK7eUs4eGpAGZORNUUe/4qsU/DYn9M7Yjp2Z2YnX4OzOgasGLqwIqus33ai2vBjq6hABZO5KGfueqXJYf6xdQRp1y9eexXc0ZeD5z/2ArXjV+D/vE34GaRn17f3vzojcwzU/5lO+Y/gA44W+vTBHEAAAAASUVORK5CYII=" InformativeScreenshot="ac054c449bb2295322bbacdef350b99e.jpg" Selector="&lt;html app='msedge.exe' title='Administration Platform' /&gt;" Title="Administration Platform" Url="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

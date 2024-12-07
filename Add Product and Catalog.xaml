@@ -1,0 +1,510 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Product_and_Catalog" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Add_Product_and_Catalog_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Add_Product_and_Catalog" sap:VirtualizedContainerService.HintSize="1260,6922" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Welcome to cpq-20312" sap:VirtualizedContainerService.HintSize="586,6899" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,6659" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="addedFamilies" />
+              <Variable x:TypeArguments="sd:DataTable" Name="sheetData" />
+              <Variable x:TypeArguments="sd:DataTable" Name="pfName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" Version="V4" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,387" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/commerce/display_company_profile.jsp" CVScreenId="af048023-c412-4a58-a64d-3952354561c8" CvElementArea="1581, 131, 34, 32" CvType="Icon" DesignTimeRectangle="1584, 135, 27, 30" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Admin' aria-role='img' parentid='ui-id-3' tag='SPAN' type='' class='oj-navigationlist-item-icon cpq-nav-icon cpq-nav-gear' aaname='' /&gt;" Guid="a3b8856b-2ed4-4417-b334-76f4a70b7514" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAiCAYAAACnSgJKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVFhH7Za3S21BEMb95/QaCnMoRFRQ0UILAwZMGEHMhZWKhdgYChUFK0sDBlBszDmAGOt5/Ab2svfsuc/r4fEs3iuGZXdmvm93J+zGfX5+yk9JnHfhb0og8qWlJamoqJCUlBQdmXttYpFA5G1tbUqckJAgycnJ0tra6tjEIlHJr66uZHt7W/b39+Xj4yNCV1dXJ/Hx8WFhbuuxx29ra0suLy8dbCO+5DgODw9LWVmZ1NTUyNzcnAIiZ2dnUlVVFUFeWVkpp6enYZv5+Xmpra2V0tJSxQHPy+FLfn5+LqOjo5KTk6PAXG9JSYlMTk7qelNTk2RmZkaQZ2RkSGNjo+onJibUHj904IyMjOimvVwO+c7Oju7aBk9MTJS8vDxJS0uTUCgUoTPCOnrssLd13B4h9HI55Fzf4OCgc7qgAs7AwICcnJx8TU7MNjc3pbOzU9LT033BiHF7e7v09PToyNxvs/iDA543aX3JzQYWFhYkPz8/DERZFRQUaAKtr69rDB8eHnRkzjp67IwP/uD4EUclf35+lqmpKY0hIMSTxJmZmZG7uzt5fX2Vm5sbDREjc9bRY2fyAn9wwPNyRJBfX1/L0dGRHBwc6Emam5vDJ0hNTZXe3l4FeXt7U5vp6WmNJePh4aGuo8cOe+MLDnj4gA+PQ861sWv72uzrowre39+1FBsaGrSzoaOkKDOaCXrs7HAZARd8eBzypKQkX2KkuLhYXl5e1I4+XlhYGKEvKiqSlZUV1WOHvRfDbAAehzxa/XrJV1dXHXDma2trX5Ij8Djk3d3d4QTzCte4u7ur13p7eysdHR3huDJ2dXVpwqHHzu/aEfDhccgvLi5kb29PHwNOR1xtp76+Pk0oCI6Pj2V5eVkzmZEGwjp67OxD1NfXa0jABR8ehxwBgKx9enrSHm1Ox1Xl5ubK7Oys1jZ2j4+PmrmM1DHr6LEzIcQfHPDAxc/m861zvyYDIIk2NjYmGxsbcn9/r4CMzFlHb+fOt5sMhlwRcfRrr5RLdXW1ttb+/n4dmZtX0BbTXsHz24BDTrscGhqSrKwsByyIgMNDRTf0cjnk0Z5UYkkMo5WkeVKxC/ykcnIe/+zsbHU0n4nx8XFdpwr4PNjgv/tMgENXi+kzgVASXD3fIHZNFpOpxI2y4gm1ye1vFHbY44c/OOB5OaKSI/Rq3mEcvSUSywcSP/y//YH8Svgqm4eFsaWlxbGJRQKRLy4uSnl5uT4SjMy9NrFIIPI/Jf/Jf0T+XfJftV8i+3sX+5IAAAAASUVORK5CYII=" InformativeScreenshot="8c1a45aa65a9d34a1c63b5cd5529a7d2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Welcome to cpq-20312' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Product Definition'" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" CVScreenId="380b1342-e170-4f25-b461-8c56afe8279c" CvTextArea="487, 764, 110, 13" CvTextArgument="Product Definition" CvType="Text" DesignTimeRectangle="487, 765, 110, 14" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Product Definition' parentid='list-display' type='' tag='A' class='' check:innerText='Product Definition' /&gt;" Guid="d795d07b-67c3-4949-b372-2748600a791f" InformativeScreenshot="8a3baaea56a699c8f3bc2f1c8fc0b050.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Administration Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Product Family List Sel…'" sap:VirtualizedContainerService.HintSize="518,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" TextString="[addedFamilies]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp" DesignTimeRectangle="19, 187, 1909, 471" DesignTimeScaleFactor="1.100000023841858" ElementType="Container" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='FORM' class='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;   &amp;#x9;&amp;#x9;&amp;#x9;                                                                                          ' /&gt;" Guid="9b86ecc6-d819-4437-9cde-2b77216faf4a" InformativeScreenshot="6692a525569629e1eea6c0a6e833eb42.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[sheetData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="518,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="ConfigData" WorkbookPath="CPQ Hierarchy\CPQ Config Data.xlsx" />
+            <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[pfName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[sheetData.AsEnumerable().GroupBy(Function(x) x("Prod Family").ToString).[Select](Function(y) y.First()).CopyToDataTable()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[pfName]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,5448" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,5259" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[addedfamilies.Contains(CurrentRow.Item(&quot;Prod Family&quot;).ToString) = True]" sap:VirtualizedContainerService.HintSize="450,5199" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,4930" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp?_bm_trail_refresh_=true" Version="V4" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp" CVScreenId="7e569619-f660-4ed4-b27a-785c09f2369c" CvElementArea="1677, 622, 48, 33" CvTextArea="1687, 631, 28, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1680, 624, 43, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Add' /&gt;" Guid="863eb801-49ff-4640-a21f-eed9896860fb" InformativeScreenshot="c09bcc8ba6ad4e52e03b79c354ad5408.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Label'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Text="[CurrentRow.Item(&quot;Prod Family&quot;).ToString]" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/edit_prdfamily.jsp" CVScreenId="c6f0f91f-eab5-4b13-a57f-d0e76067af9e" CvElementArea="611, 246, 179, 24" CvType="InputBox" DesignTimeRectangle="613, 247, 176, 21" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='form-input' aaname='' /&gt;" Guid="5268cf69-32a3-40bd-bafc-137c836c68af" InformativeScreenshot="05acbb09def50fb61f029abec4d2ff93.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family Definition' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="c6f0f91f-eab5-4b13-a57f-d0e76067af9e" CvTextArea="614, 229, 36, 13" CvTextArgument="Label" CvType="Text" DesignTimeRectangle="612, 228, 285, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='view-header' tag='TD' aaname='Label' check:innerText='Label' /&gt;" Guid="77bf19c9-5e10-4573-9769-fb760ca5d3a4" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Variable Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Text="[CurrentRow.Item(&quot;Prod Family Var Name&quot;).ToString]" Version="V4">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/edit_prdfamily.jsp" CVScreenId="c6f0f91f-eab5-4b13-a57f-d0e76067af9e" CvElementArea="897, 245, 180, 24" CvType="InputBox" DesignTimeRectangle="899, 247, 177, 21" DesignTimeScaleFactor="1.100000023841858" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='variable_name' type='text' tag='INPUT' class='form-input' aaname='' /&gt;" Guid="a1b59760-020b-4b87-9537-646c7cb5752f" InformativeScreenshot="1290cda77ede52654801aea3d414cd06.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family Definition' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="c6f0f91f-eab5-4b13-a57f-d0e76067af9e" CvTextArea="900, 229, 92, 13" CvTextArgument="Variable Name" CvType="Text" DesignTimeRectangle="898, 228, 286, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='view-header' tag='TD' aaname='Variable Name' check:innerText='Variable Name' /&gt;" Guid="ca9830a1-4bf1-4336-ad01-88566e87532e" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/edit_prdfamily.jsp" CVScreenId="08325bff-c2d0-4cc3-b8dd-ac8fbe1c23b8" CvElementArea="1819, 308, 49, 33" CvTextArea="1829, 318, 28, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1821, 310, 45, 30" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl class='button-middle' type='' tag='TD' aaname='' check:innerText='Add' /&gt;" Guid="e7e19850-b76a-45af-82f0-fddd214726cb" InformativeScreenshot="064e22df5251810055c0100e0c95642d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family Definition' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Product Family: &quot;+CurrentRow.Item(&quot;Prod Family&quot;).ToString+&quot; added to Product Definition&quot;]" UseDefaultEncoding="False" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Product Line Attributes'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp?_curpos=0&amp;orderby=id&amp;asc=false" CVScreenId="42f5ce26-4754-4712-be86-d9814525cf07" DesignTimeRectangle="567, 253, 275, 19" DesignTimeScaleFactor="1.100000023841858" ElementType="DropDown" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;form&amp;gt;table' idx='2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;" Guid="6b7711ca-2a7c-4ba1-9cf2-36b9c76925e7" InformativeScreenshot="70cfaef01eb187c3502c79aa714649b9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)]d[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V4">
+                            <uix:NKeyboardShortcuts.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NKeyboardShortcuts.VerifyOptions>
+                          </uix:NKeyboardShortcuts>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'List'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp?_curpos=0&amp;orderby=id&amp;asc=false" CVScreenId="2b21af1e-b79a-416a-8270-216bfb35b01f" DesignTimeRectangle="1121, 248, 41, 32" DesignTimeScaleFactor="1.100000023841858" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" Guid="879ec7d0-99ee-44c9-958c-c6cb5a0b65d0" InformativeScreenshot="23525942d68e7b0cdfc47aeed01dab78.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Deploy'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/deployment/deploy_prdfamily.jsp" CVScreenId="e73a4afe-07a1-4a98-ae7d-a9e9a23d21d1" CvElementArea="1397, 253, 67, 32" CvTextArea="1408, 262, 45, 16" CvTextArgument="Deploy" CvType="Button" DesignTimeRectangle="1400, 254, 62, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Deploy' /&gt;" Guid="3f6cc74a-5158-4722-bd78-dad034bd7fbb" InformativeScreenshot="c26382b2f25927185cec805c84475f27.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/deployment/deploy_prdfamily.jsp" CVScreenId="cbd98285-d491-4fe5-bd7a-e234cbd4bea0" DesignTimeRectangle="1799, 405, 66, 31" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Refresh' /&gt;" Guid="079cedcf-378f-465e-9f0b-6844c06c44dd" InformativeScreenshot="3b4238bf40b3674d7b7ee837d28b2f11.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/deployment/deploy_prdfamily.jsp" CVScreenId="cbd98285-d491-4fe5-bd7a-e234cbd4bea0" DesignTimeRectangle="1874, 405, 49, 31" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Back' aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Back' /&gt;" Guid="66315916-a6c3-4998-a0e7-d1197848e9a4" InformativeScreenshot="0d06f00e4db03f78218b68aca50ad684.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Deployment Center' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Product Definition for Family: &quot;+CurrentRow.Item(&quot;Prod Family&quot;).ToString+&quot; is deployed&quot;]" UseDefaultEncoding="False" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/definition/list_prdfamilies.jsp?_bm_trail_refresh_=true" CVScreenId="021c06c2-1532-42f7-9b5f-228f5e3cefd7" CvElementArea="1596, 133, 33, 32" CvType="Icon" DesignTimeRectangle="1599, 137, 27, 26" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-label='Admin' aria-role='img' parentid='ui-id-3' tag='SPAN' type='' class='oj-navigationlist-item-icon cpq-nav-icon cpq-nav-gear' aaname='' /&gt;" Guid="3f56f764-7032-4020-896c-68a4af6c7ee1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAeCAYAAADU8sWcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOmSURBVEhLxZY3S61BEIb9c+bCHAoRFVS00MKAARNGEHNhpWIhNoZCRcHK0oABFBtzDiDGei7PwB727H7nejxcrsWw7M7M++7uhN24r68v+S2Jcxf+p8REvry8LJWVlZKamqojc9cmGomJvL29XYkTEhIkJSVF2traPJtoJCL59fW17OzsyMHBgXx+fobp6uvrJT4+PiTMbT32+G1vb8vV1ZWHbSSQHMeRkREpLy+X2tpamZ+fV0Dk/Pxcqqurw8irqqrk7OwsZLOwsCB1dXVSVlamOOC5HIHkFxcXMjY2Jrm5uQrM9ZaWlsrU1JSuNzc3S1ZWVhh5ZmamNDU1qX5yclLt8UMHzujoqG7a5fLId3d3ddc2eFJSkuTn50t6erokJiaG6Yywjh477G0dt0cIXS6PnOsbGhryThergDM4OCinp6ffkxOzra0t6erqkoyMjEAwYtzR0SG9vb06Mg/aLP7ggOcmbSC52cDi4qIUFBSEgCirwsJCTaCNjQ2N4ePjo47MWUePnfHBH5wg4ojkLy8vMj09rTEEhHiSOLOzs3J/fy9vb29ye3urIWJkzjp67Exe4A8OeC5HGPnNzY0cHx/L4eGhnqSlpSV0grS0NOnr61OQ9/d3tZmZmdFYMh4dHek6euywN77ggIcP+PB45Fwbu7avzb4+quDj40NLsbGxUTsbOkqKMqOZoMfODpcRcMGHxyNPTk4OJEZKSkrk9fVV7ejjRUVFYfri4mJZXV1VPXbYuxhmA/B45JHq1yVfW1vzwJmvr69/S47A45H39PSEEswVrnFvb0+v9e7uTjo7O0NxZezu7taEQ49d0LUj4MPjkV9eXsr+/r4+BpyOuNpO/f39mlAQnJycyMrKimYyIw2EdfTY2YdoaGjQkIALPjweOQIAWfv8/Kw92pyOq8rLy5O5uTmtbeyenp40cxmpY9bRY2dCiD844IGLn80XWOdBTQZAEm18fFw2Nzfl4eFBARmZs47ezp0fNxkMuSLiGNReKZeamhptrQMDAzoyN6+gLaa9ghe0AY+cdjk8PCzZ2dkeWCwCDg8V3dDl8sgjPanEkhhGKknzpGIX85PKyXn8c3Jy1NF8JiYmJnSdKuDzYIP/7TMBDl0tqs8EQklw9XyD2DVZTKYSN8qKJ9Qmt79R2GGPH/7ggOdyRCRH6NW8wzi6JRLNBxI//H/8gfxO+Cqbh4WxtbXVs4lGYiJfWlqSiooKfSQYmbs20UhM5P9KfpX8D8ynQ1V49M8oAAAAAElFTkSuQmCC" InformativeScreenshot="2b34d7685c4ea12d166bd1b5d02f18b9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Product Family List' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Catalog Definition'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/index.jsp?_bm_trail_refresh_=true" CVScreenId="a6a3e1ec-cd6f-4a1c-ae8c-85e71d6bdb19" CvTextArea="486, 788, 110, 16" CvTextArgument="Catalog Definition" CvType="Text" DesignTimeRectangle="487, 789, 109, 14" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Catalog Definition' parentid='list-display' type='' tag='A' class='' check:innerText='Catalog Definition' /&gt;" Guid="91d0069d-6f05-441d-aa4c-a6a08383e460" InformativeScreenshot="b51e3785ee96801ed770ef5837009d32.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Administration Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'List'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/configuration/admin_config.jsp?_bm_trail_refresh_=true" CVScreenId="adf5c263-3d33-43b6-ad3b-a8ef4574ce7f" CvElementArea="973, 245, 46, 34" CvTextArea="984, 255, 26, 13" CvTextArgument="List" CvType="Button" DesignTimeRectangle="976, 248, 41, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='List' /&gt;" Guid="6d6ab7e3-5197-4e93-b56f-b8dc7e418d62" InformativeScreenshot="4f119ac5e438c818e55457cfc11abdaa.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Catalog Definition' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="382,269" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
+                            <uix:NMouseScroll.SearchedElement>
+                              <uix:SearchedElement>
+                                <uix:SearchedElement.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/products/list_prdfamilies.jsp" CVScreenId="4e7b4e78-88ad-472c-a9af-237e4ae2806a" CvElementArea="1672, 980, 49, 34" CvTextArea="1683, 990, 27, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1675, 982, 44, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Add' /&gt;" Guid="9b78368f-5682-4cdf-9c4d-05e8eecd517c" InformativeScreenshot="2da4f0729de7e5639a0b0b40d19242d0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Supported Product Families' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                </uix:SearchedElement.Target>
+                                <uix:SearchedElement.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:SearchedElement.Timeout>
+                              </uix:SearchedElement>
+                            </uix:NMouseScroll.SearchedElement>
+                          </uix:NMouseScroll>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/products/list_prdfamilies.jsp" CVScreenId="4e7b4e78-88ad-472c-a9af-237e4ae2806a" CvElementArea="1672, 980, 49, 34" CvTextArea="1683, 990, 27, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1675, 982, 44, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Add' /&gt;" Guid="2b88f694-1ec8-4420-b3da-c86581c87d03" InformativeScreenshot="fdcbcf143d7183f1fde099cf42df0ffe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Supported Product Families' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Available Product Famil…'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/products/edit_prdfamily.jsp" DesignTimeRectangle="531, 247, 440, 110" DesignTimeScaleFactor="1.100000023841858" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='form-input' aaname='' /&gt;" Guid="3b4355b0-3b8c-42da-b5e7-a22cf421bad5" InformativeScreenshot="31fd1b31a3ba0a52b738a1745c82b5f5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Supported Product Families Admin' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CVScreenId="31ae8a8d-8270-45dc-ae23-c5b286366479" CvTextArea="19, 250, 161, 13" CvTextArgument="Available Product Families:" CvType="Text" DesignTimeRectangle="20, 246, 509, 112" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='form-label' aaname='Available Product Families:' check:innerText='Available Product Families:' /&gt;" Guid="cc45dd4a-3157-41e2-a01f-c3b38293b25d" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,257" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[CurrentRow.Item(&quot;Prod Family&quot;).ToString]" Version="V4" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2388da3c-4729-4e70-8adc-f5340fce1bca" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cpq-20312.bigmachines.com/admin/catalog/products/edit_prdfamily.jsp" CVScreenId="217bf96e-a084-4a6f-bec5-dae5f9dcdcd8" CvElementArea="1807, 396, 49, 33" CvTextArea="1817, 407, 28, 13" CvTextArgument="Add" CvType="Button" DesignTimeRectangle="1810, 399, 44, 32" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='' check:innerText='Add' /&gt;" Guid="ba0ea825-99e4-4ec6-af01-b30a7fc8a963" InformativeScreenshot="d48e646d653007edeb2736d22bd16ea5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Supported Product Families Admin' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="Logs\automation_logs.txt" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)+&quot;:      &quot;+&quot;Product Family: &quot;+CurrentRow.Item(&quot;Prod Family&quot;).ToString+&quot; added to Catalog Definition&quot;]" UseDefaultEncoding="False" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAjHSURBVFhHpdZ5UJNnHgfw4IFIbhS27T87O51xdeUmBpRUrdiyRc5wCZYCBe16TVVcBEREMSLIaQEVo+12qu6uq3aL4FFJn1wkEI4ASQgE8UTU2k3dTuOq3Xx33gRcDODa7nfmnfyV9/t5fs/zJi+N9orxJw8T/aQjxFc6bPaR3oCP7Bq8ZSb4KIzwUergp9LCT9Vl4bWpB3ltanFwV/OvHe/xi8Ij34t5xGzxlz6Er3QYvtLboABeskF4yQbgLe+Dt0IHn5Zu+Kk6wGtVI6hdCoH2qnVZz8XBFboGgeM9Xyl88ljAJz+aeeQRAqTfwV/6AL7SO/CR3oS39Dq8pBSgD54yA7wUPfBWdsNX1Q5/tQaLOyjAFSzvacBK/TmEDZzsihoSv/pEAsnjYj6xWG3l5B/wJw/gJ70HX+ld++qlg/C0ldsBnvIeeCm64KvSIKBVBX67DIs7m22A0L7TeM94EtFDRy3Jw8WJjl0TEkieiPnkRywiP4AC8IjZtno/6V3bBGyrlw1gIVVsu/RYKKMA3fBWdsBP3Qa+hprA5VHAKUQN1lMAJA8XW9cMi6ZGBJGnxYHkCfjEAgrBI98jgDyEv/S+DeAts++9p8xoWz1VvFDWi9/JurFQTgE64dOiAa9VBkHXJazoPYdQwxeIGjyKhJvlWDMsQurILmvGg+yJ5yKIPBMEkifWQPIvG2AR+ScWkUfws+39XfhJh+FtO3z9WCjTPS92vLwUHfBpaUVQ+9dYqm1AiO4MwgeOIvZ6BZJvFyH9fh7WfptlceynBZKn5kDyFHzyeBTwA/wlZiz46hYWNAxhQcM1zL8wAC+ZyTZ+x+Kxy1PRCV+VGks6LmGp9u8I6aUA9YgdKkXSLRHSR7Kw9sFmbDJnip+XB5FnYqp8bPXzTt+A+54rYGedByenEdy8S3DLa4Jb3gXM2XEerxU34c2/dUwotwOoR5GA3yZBcGcjVupOIsxYj4TrRUi6mY+04a3IvLcBGx+mWMcDLEHkKTy//A6cvCtg7rgCVj4Be7cSnCIVuKJWuInUmCNqwdwiGebukWBuwUW8VtSEeY1ahy3QwLdFgSDNBSzt/CtCuj/Dqr5qRPaXYvWNXKTe2YyMu+vwh/sp2PwwTkwLIj8lBpFnmHdyGK5Zl8HYKQezsA2sfVqwD/SCU6oHt0wPtzI95pTr4V7eA/eDnXA/oIJ7kQTu+Q1486x9Gp7yTngrlPBtUWKRqgnBHeewQnsc4X2VEJoKkTi0A8nXt+DD4XX46F4KNjxIGKEFNz/WLjjzLWZvl8A1Xw36ni4wRXqwSoxgl/aDUz4AboUJblUmzKkyYW61CXOrjPCo1MPjYDs8RDK472rEb5vU8JYr4KuQwF95EUGtZ/BW++dY0XUY4XoRYow7kWDaig9uZCL9dhoyh5Pw0V0haAENj/7NLGiDS74Grnt6QBf1gVHcD2aJCayDJrDLBsGpGAS38hrcqq5hTvU1zK3uxxuH+gZ/dchY4lHRle2xX6l+veQqPAkFuAp/ZSMWq7/AW5rjeLujFhH6IgiNeUgwbcOaoXVIu5mGjFvxdsD8Pz/ArJ0dcNndg9lFBriK+kHf3w/6gYEXEeV2BCe/Bb/Z+mX18wM0Gg+RPG3e+WYEKM6CrzyNoJY/YammHiHtpQjvyUGkLgdxxk14/1oaUm+ssQHW3okBzb1yAM753ZhVaIBLkRGz9xltCNdRBKNkAMxSO4KdTUAPK1U7lo9l/meXnwbIToGvPIUlqmNYqi7DCk0pwrQ7ENm7HULDRiQZk5EyGI/060Jk3owEjVtmwswCPZx3GzBrjxEue+2I2Y6IHCXoYSVgRB3KdiweC+8vl3sDZJ8jUF6LYGU5lrWW4t22HQjVbEeEdj1iejMQr0/B+6Y4fGCKQOaNUCttRr4OMwr0mLm7D86FfZi1p8+GcBmP2GcAPbICjKhqMIVHshyLxxJAxMU82XEEymsQrDyIZS17EaLajlDNRkR0pkHYm4pEQwKSjEKk9P8eaaaQQdr0nTrM2GXAjALDRAS1JRRiYxPoERVgCA+DGXesxLF4LLxvqkcWSWuxRH4AS+T78bYyCyvVWQhtW49VbamI6kqBUBuPJEMEkvTvIcUYIqBN26nH9Hz9pIhZowjX2DowomuocjATTgw6FlPxl3wiCJBUIpCUIogUQSAvwHLFNoQoNyBUlWoHtAsh7IxEnDYMyYZQYvvitDy9eSqEMzWJvA64RpSDITwCZvxxCmBlxp+Y8HIR0Fx6PkBSDr5kL5aQAgjINiyXb0KIIgPvtqQirHU1IjUxEHZFUAB7ORWnXD2ZlqfHGGK64ySy1aBHVoERW0+Vg5nwKZjxJ0ZeaB8Nv7mwK1BSaF0syYaAZGG5fD1CFB/iHUUywlQxCG+NMUdpIre88CWnXF2iU64eExC7KIQBLusbQY86NDr+T8cA1DTOv3CjcRFINm8RkI/Fy0gGCZGtIe/IV4tDFbET3wHG4pSrs1AIp/GIfDvCebsK9OhPJgOAFXds0vPw85OjK3bK1cF2OSBmZmtAj6oGY3IAWLH1Fpbw6ItjfUm4q8oTuWFlE84QhTDTHBB2iAH0mBowYo+OPwPjAWAJj4IlPGJhxxw+z46um/DOx4moSuSEV4o54RVm7qpycMPKJplcjk5Ay9FZJ0PMyvwKjJg6MOPFdsTkALBjDoMdXQd2dC3YUTXgRB4CJ7IanIgqcMIrwQmvAHdVuZUbVjbFecjRFdNydHBETN/RCXrsYTDi6u2P4v8HKHasfTE5OvEERJ4ezuuvgBFTaz+McRTiFwH++x740tgnYaUg4xEu6WftW0H9JsSJwYqrf1WAlRNe+T9W7hj7mTA7ImyTiK6l/pTAiqWK7eUs4eGpAGZORNUUe/4qsU/DYn9M7Yjp2Z2YnX4OzOgasGLqwIqus33ai2vBjq6hABZO5KGfueqXJYf6xdQRp1y9eexXc0ZeD5z/2ArXjV+D/vE34GaRn17f3vzojcwzU/5lO+Y/gA44W+vTBHEAAAAASUVORK5CYII=" InformativeScreenshot="1ba33327868f3ad5524c28639f4c5510.jpg" Selector="&lt;html app='msedge.exe' title='Welcome to cpq-20312' /&gt;" Title="Welcome to cpq-20312" Url="https://cpq-20312.bigmachines.com/commerce/display_company_profile.jsp" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,15 @@
+Configuration Attributes,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+update,ref_var_name,ref_type,ref_category,config_category,name: en,variable_name,menu_type,data_type,display_type,order_number,pricing_type,pricing_display_type,menu_display_text: en,menu_variable_name
+add,allEquipment:cars,Product Family,1,Configurable Attributes,Manufacture Year,manufactureYear,FALSE,Text,Text,1,None,None,,
+add,allEquipment:cars,Product Family,1,Configurable Attributes,Car Colour,carColour,TRUE,Text,Single Select Menu,2,None,None,Black~White~Silver~Blue~Green~Yellow,Black~White~Silver~Blue~Green~Yellow
+add,allEquipment:cars:hatchback,Product Line,1,Configurable Attributes,Radio,radio,FALSE,Boolean,Boolean Checkbox,1,None,None,,
+add,allEquipment:cars:hatchback,Product Line,1,Configurable Attributes,Tyre Size,tyreSize,FALSE,Integer,Text,2,None,None,,
+add,allEquipment:cars:sedan,Product Line,1,Configurable Attributes,ADAS Features,aDASFeatures,TRUE,Text,Multi Select Menu,1,None,None,ABS~EBD~Collision Warning~Lane Depart,ABS~EBD~Collision Warning~Lane Depart
+add,allEquipment:planes:emirates,Product Line,1,Configurable Attributes,Type of Airline,typeOfAirline,TRUE,Text,Single Select Menu,1,None,None,Domestic~International,Domestic~International
+add,allEquipment:cars:hatchback:alto,Model,1,Configurable Attributes,Car Model,carModel,TRUE,Text,Single Select Menu,1,None,None,LXI~VXI,LXI~VXI
+add,allEquipment:cars:hatchback:alto,Model,1,Configurable Attributes,AC,airCondition,FALSE,Boolean,Boolean Checkbox,2,None,None,,
+add,allEquipment:cars:hatchback:altroz,Model,1,Configurable Attributes,Infotainment,infotainment,FALSE,Boolean,Boolean Checkbox,1,None,None,,
+add,allEquipment:cars:sedan:ciaz,Model,1,Configurable Attributes,Accessories,accessories,TRUE,Text,Multi Select Menu,1,None,None,Spoiler~Extended Warranty~Sunroof,Spoiler~Extended Warranty~Sunroof
+add,allEquipment:planes:emirates:airbus,Model,1,Configurable Attributes,Date of Departure,dateOfDeparture,FALSE,Date,Date,1,None,None,,
+add,allEquipment:planes:emirates:airbus,Model,1,Configurable Attributes,Number of Seats,numberOfSeats,FALSE,Integer,Text,2,None,None,,

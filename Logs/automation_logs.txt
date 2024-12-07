@@ -1,0 +1,54 @@
+﻿TIMESTAMP		  EVENT
+============================================================================================================================
+27-10-2024 11:07:41:      devdeepdasgupta logged into CPQ
+27-10-2024 11:07:42:      Blank CSV file created for Bulk Upload of Product Lines
+27-10-2024 11:07:42:      Row added for Product Line: Hatchback  for Product Family: Cars
+27-10-2024 11:07:42:      Row added for Product Line: Sedan  for Product Family: Cars
+27-10-2024 11:07:42:      Row added for Product Line: Emirates  for Product Family: Planes
+27-10-2024 11:07:42:      CSV for Bulk Upload of Product Lines is ready
+27-10-2024 11:07:42:      Blank CSV file created for Bulk Upload of Models
+27-10-2024 11:07:42:      Row added for Model: Alto  for Product Line: Hatchback
+27-10-2024 11:07:42:      Row added for Model: Altroz  for Product Line: Hatchback
+27-10-2024 11:07:42:      Row added for Model: Ciaz  for Product Line: Sedan
+27-10-2024 11:07:42:      Row added for Model: Airbus  for Product Line: Emirates
+27-10-2024 11:07:42:      CSV for Bulk Upload of Models is ready
+27-10-2024 11:07:49:      Product Family: Cars added to Product Definition
+27-10-2024 11:07:58:      Product Definition for Family: Cars is deployed
+27-10-2024 11:08:03:      Product Family: Cars added to Catalog Definition
+27-10-2024 11:08:07:      Product Family: Planes added to Product Definition
+27-10-2024 11:08:16:      Product Definition for Family: Planes is deployed
+27-10-2024 11:08:21:      Product Family: Planes added to Catalog Definition
+27-10-2024 11:08:37:      Bulk Upload Task Completed. For details, please see the upload logs
+27-10-2024 11:08:46:      Configuration Flow added for model: alto
+27-10-2024 11:09:02:      Attribute with variable name manufactureYear is added to the layout.
+27-10-2024 11:09:09:      Attribute with variable name carColour is added to the layout.
+27-10-2024 11:09:11:      No attributes defined for adding to Product Line column
+27-10-2024 11:09:16:      Attribute with variable name carModel is added to the layout.
+27-10-2024 11:09:22:      Attribute with variable name airCondition is added to the layout.
+27-10-2024 11:09:25:      Layout for model Alto is created and saved
+27-10-2024 11:09:33:      Configuration Flow added for model: altroz
+27-10-2024 11:09:45:      No attributes defined for adding to Product Family column
+27-10-2024 11:09:49:      Attribute with variable name radio is added to the layout.
+27-10-2024 11:09:56:      Attribute with variable name tyreSize is added to the layout.
+27-10-2024 11:10:03:      Attribute with variable name infotainment is added to the layout.
+27-10-2024 11:10:06:      Layout for model Altroz is created and saved
+27-10-2024 11:10:14:      Configuration Flow added for model: ciaz
+27-10-2024 11:10:28:      Attribute with variable name manufactureYear1 was not found. Item was skipped.
+27-10-2024 11:10:33:      Attribute with variable name aDASFeatures is added to the layout.
+27-10-2024 11:10:40:      Attribute with variable name accessories is added to the layout.
+27-10-2024 11:10:43:      Layout for model Ciaz is created and saved
+27-10-2024 11:10:51:      Configuration Flow added for model: airbus
+27-10-2024 11:11:02:      No attributes defined for adding to Product Family column
+27-10-2024 11:11:07:      Attribute with variable name typeOfAirline is added to the layout.
+27-10-2024 11:11:14:      Attribute with variable name dateOfDeparture is added to the layout.
+27-10-2024 11:11:20:      Attribute with variable name numberOfSeats is added to the layout.
+27-10-2024 11:11:23:      Layout for model Airbus is created and saved
+27-10-2024 11:11:25:      Product Family: Cars deployed
+27-10-2024 11:11:26:      Product Family: Planes deployed
+27-10-2024 11:11:35:      Home Page Deployed
+11-11-2024 04:19:41:      devdeepdasgupta logged into CPQ
+11-11-2024 04:31:45:      Blank CSV file created for Bulk Upload of Product Lines
+11-11-2024 04:31:45:      Row added for Product Line: Hatchback  for Product Family: Cars
+11-11-2024 04:31:45:      Row added for Product Line: Sedan  for Product Family: Cars
+11-11-2024 04:31:45:      Row added for Product Line: Emirates  for Product Family: Planes
+11-11-2024 04:31:45:      CSV for Bulk Upload of Product Lines is ready

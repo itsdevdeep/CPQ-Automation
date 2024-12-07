@@ -1,0 +1,9 @@
+Configuration Attributes,,,,,,,,,,,,
+,,,,,,,,,,,,
+update,ref_var_name,ref_type,config_category,name: en,variable_name,menu_type,data_type,display_type,pricing_type,pricing_display_type,menu_display_text: en,menu_variable_name
+add,allEquipment:cars,Product Family,Configurable Attributes,Manufacture Year,manufactureyear,FALSE,Text,Text,None,None,,
+add,allEquipment:cars,Product Family,Configurable Attributes,Car Colour,carcolour,TRUE,Text,Single Select Menu,None,None,Black~White~Silver~Blue~Green~Yellow,Black~White~Silver~Blue~Green~Yellow
+add,allEquipment:planes,Product Family,Configurable Attributes,Flight Type,flighttype,TRUE,Text,Single Select Menu,None,None,Domestic~International,Domestic~International
+add,allEquipment:planes,Product Family,Configurable Attributes,Seat Type,seattype,TRUE,Text,Single Select Menu,None,None,Economy~Business,Economy~Business
+add,allEquipment:planes,Product Family,Configurable Attributes,Number of Passengers,numberofpassengers,FALSE,Integer,Text,None,None,,
+add,allEquipment:buses,Product Family,Configurable Attributes,Ticket Confirmed,ticketconfirmed,FALSE,Boolean,Boolean Checkbox,None,None,,
