@@ -1,0 +1,7 @@
+Configuration Attributes,,,,,,,,,,,,
+,,,,,,,,,,,,
+update,ref_var_name,ref_type,config_category,name: en,variable_name,menu_type,data_type,display_type,pricing_type,pricing_display_type,menu_display_text: en,menu_variable_name
+add,allEquipment:cars:hatchbacks,Product Line,Configurable Attributes,Radio,radio,FALSE,Boolean,Boolean Checkbox,None,None,,
+add,allEquipment:cars:hatchbacks,Product Line,Configurable Attributes,Tyre Size,tyresize,TRUE,Integer,Single Select Menu,None,None,13~14~15,13~14~15
+add,allEquipment:cars:sedans,Product Line,Configurable Attributes,ADAS Features,adasfeatures,TRUE,Text,Multi Select Menu,None,None,ABS~EBD~Collission Warning~Cruise Control,ABS~EBD~Collission Warning~Cruise Control
+add,allEquipment:planes:jets,Product Line,Configurable Attributes,Seating Capacity,seatingcapacity,FALSE,Integer,Text,None,None,,
