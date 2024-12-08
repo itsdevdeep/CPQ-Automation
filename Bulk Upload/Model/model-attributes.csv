@@ -1,0 +1,12 @@
+Configuration Attributes,,,,,,,,,,,,
+,,,,,,,,,,,,
+update,ref_var_name,ref_type,config_category,name: en,variable_name,menu_type,data_type,display_type,pricing_type,pricing_display_type,menu_display_text: en,menu_variable_name
+add,allEquipment:cars:hatchbacks:alto,Model,Configurable Attributes,Car Model,carmodel,TRUE,Text,Single Select Menu,None,None,LXI~VXI,LXI~VXI
+add,allEquipment:cars:hatchbacks:alto,Model,Configurable Attributes,Air Conditioning,airconditioning,FALSE,Boolean,Boolean Checkbox,None,None,,
+add,allEquipment:cars:hatchbacks:altroz,Model,Configurable Attributes,Infotainment,infotainment,FALSE,Boolean,Boolean Checkbox,None,None,,
+add,allEquipment:cars:sedans:virtus,Model,Configurable Attributes,Wheel Design,wheeldesign,TRUE,Text,Single Select Menu,None,None,Steel~Alloy Wheels,Steel~Alloy Wheels
+add,allEquipment:planes:jets:airbus,Model,Configurable Attributes,Design,design,FALSE,Text,Text,None,None,,
+add,allEquipment:planes:jets:airbus,Model,Configurable Attributes,Controls,controls,FALSE,Text,Text,None,None,,
+add,allEquipment:planes:jets:boeing,Model,Configurable Attributes,Comfort Class,comfortclass,TRUE,Text,Single Select Menu,None,None,Business~Semi-Business,Business~Semi-Business
+add,allEquipment:buses:private bus:volvo,Model,Configurable Attributes,Distance,distance,FALSE,Integer,Text,None,None,,
+add,allEquipment:buses:public bus:state transport,Model,Configurable Attributes,Number of Trips,numberoftrips,TRUE,Integer,Single Select Menu,None,None,2~3~4,2~3~4
